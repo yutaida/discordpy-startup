@@ -4,7 +4,7 @@ import traceback
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-
+guild = client.get_guild(ID)
 
 @bot.event
 async def on_command_error(ctx, error):
