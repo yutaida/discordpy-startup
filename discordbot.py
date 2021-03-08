@@ -4,7 +4,7 @@ import traceback
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-
+guild = client.fetch_guild(ID)
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -15,7 +15,7 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send("pong")
+    await ctx.send(guild.member_count)
  
 
 bot.run(token)
