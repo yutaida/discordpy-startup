@@ -14,9 +14,9 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-guild = discord.utils.get(client.guilds, name='れいわ')
+
 async def ping(ctx):
-    await ctx.send(guild.member_count)
+    await ctx.send("んんんん？？？？？？？？？？")
  
 
 bot.run(token)
