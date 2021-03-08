@@ -4,7 +4,7 @@ import traceback
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-guild = client.fetch_guild("498788831168954379")
+
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -14,6 +14,7 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
+guild = discord.utils.get(client.guilds, name='れいわ')
 async def ping(ctx):
     await ctx.send(guild.member_count)
  
